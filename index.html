@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    🔒 SECURITY LOCK: INSANUS PLANNER VISUAL IDENTITY - SYSTEM FROZEN
+    ████████████████████████████████████████████████████████████████████████
+    
+    CRITICAL INSTRUCTION FOR AI AGENTS:
+    1. DO NOT MODIFY the Tailwind Configuration below.
+    2. DO NOT CHANGE the color palette (insanus-red, neon, etc).
+    3. DO NOT SIMPLIFY the glassmorphism classes (.glass).
+    4. DO NOT REMOVE the background grid effects.
+    5. This frontend is in RELEASE CANDIDATE state. Only logic updates are permitted.
+    
+    HASH: VISUAL_CORE_LOCKED_V1
+  -->
+  
+  <title>Insanus Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* TAILWIND CONFIGURATION - IMMUTABLE ZONE */
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            insanus: {
+              black: '#050505',
+              card: '#0F0F0F',
+              gray: '#1A1A1A',
+              border: '#333333',
+              red: '#FF1F1F',
+              redDark: '#8a0000',
+              neon: '#FF3333',
+              dim: 'rgba(255, 255, 255, 0.05)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+            display: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'neon': '0 0 10px rgba(255, 31, 31, 0.5), 0 0 20px rgba(255, 31, 31, 0.3)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          },
+          backgroundImage: {
+            'grid-pattern': "linear-gradient(to right, #1f1f1f 1px, transparent 1px), linear-gradient(to bottom, #1f1f1f 1px, transparent 1px)",
+            'radial-glow': "radial-gradient(circle at center, var(--tw-gradient-stops))",
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* GLOBAL STYLES - IMMUTABLE ZONE */
+    html, body, #root {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent body scroll, handle inside containers */
+      background-color: #050505;
+      color: #e5e5e5;
+    }
+    
+    /* Global selection color */
+    ::selection {
+      background: #FF1F1F;
+      color: white;
+    }
+
+    /* Custom Scrollbar - Slim and Modern */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF1F1F;
+    }
+
+    /* Utility Classes for Glassmorphism */
+    .glass {
+      background: rgba(10, 10, 10, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .glass-hover:hover {
+      background: rgba(255, 31, 31, 0.05);
+      border-color: rgba(255, 31, 31, 0.3);
+      box-shadow: 0 0 15px rgba(255, 31, 31, 0.1);
+    }
+
+    /* Enhanced Grid Background */
+    .bg-tech-grid {
+      background-size: 50px 50px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    }
+
+    /* Optional: Scanline effect for extra retro-tech feel */
+    .scanlines {
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+      background-size: 100% 4px;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0.1;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "firebase/": "https://esm.sh/firebase@^12.8.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "pdf-lib": "https://esm.sh/pdf-lib@^1.17.1"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
