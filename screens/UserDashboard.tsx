@@ -346,8 +346,15 @@ const generateSchedule = (
 
                     let workedOnThisDiscipline = false;
 
-                    while (cursor < tasks.length && availableMin > 0) {
+                    while (cursor < tasks.length) {
                         const currentTask = tasks[cursor];
+                      let isDone = false;
+                        if (currentTask.subGoalId) {
+                            isDone = completedGoalIds.includes(`${currentTask.goal.id}:${currentTask.subGoalId}`);
+                        } else {
+                            isDone = completedGoalIds.includes(currentTask.goal.id);
+                        }
+                      if (availableMin <= 0 && !isDone) break;
                       
                       
                         
@@ -359,12 +366,7 @@ const generateSchedule = (
                             currentSubjectId = currentTask.subjectId;
                         }
 
-                        let isDone = false;
-                        if (currentTask.subGoalId) {
-                            isDone = completedGoalIds.includes(`${currentTask.goal.id}:${currentTask.subGoalId}`);
-                        } else {
-                            isDone = completedGoalIds.includes(currentTask.goal.id);
-                        }
+                        
 
                         const cost = (advanceMode && dateStr === getTodayStr() && isDone) ? 0 : currentTask.duration;
 
