@@ -346,16 +346,9 @@ const generateSchedule = (
 
                     let workedOnThisDiscipline = false;
 
-                    while (cursor < tasks.length) {
+                    while (cursor < tasks.length && availableMin > 0) {
                         const currentTask = tasks[cursor];
-                      let isDone = false;
-        if (currentTask.subGoalId) {
-            isDone = completedGoalIds.includes(`${currentTask.goal.id}:${currentTask.subGoalId}`);
-        } else {
-            isDone = completedGoalIds.includes(currentTask.goal.id);
-        }
-        
-        if (availableMin <= 0 && !isDone) break;
+                      
                       
                         
                         if (currentTask.subjectId !== currentSubjectId) {
